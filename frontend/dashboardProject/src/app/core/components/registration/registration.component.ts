@@ -75,7 +75,7 @@ export class RegistrationComponent implements OnInit{
     console.log(this.imageSrc)
   }
 
-
+//enviar formulario atras do click methodo
 onSubmit(form: FormGroup) {
   if(form.valid){
     // console.log('Valid?', form.valid); // true or false
