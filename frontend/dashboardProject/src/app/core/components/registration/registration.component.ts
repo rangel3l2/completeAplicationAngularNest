@@ -84,7 +84,7 @@ onSubmit(form: FormGroup) {
 
 
 
-
+//mostra no terminal mudança
     console.log(this.product);
 
     this.productService.save(this.product).subscribe({
