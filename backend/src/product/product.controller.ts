@@ -14,6 +14,7 @@ export class ProductController {
 
   @Get()
   findAll() {
+    
     return this.productService.findAll();
   }
 

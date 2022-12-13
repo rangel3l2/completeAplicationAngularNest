@@ -15,6 +15,7 @@ import { EcomerceComponent } from './ecomerce/ecomerce.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ListSelectionComponent } from './dashboard/list-selection/list-selection.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardProductComponent } from './ecomerce/card-product/card-product.component';
 
 const COMPONENTS = [
   SideBarComponent,
@@ -28,13 +29,13 @@ const COMPONENTS = [
   BarChartComponent,
   EcomerceComponent,
   RegistrationComponent,
-  ListSelectionComponent
-
+  ListSelectionComponent,
+  CardProductComponent,
 
 
 ]
 @NgModule({
-  declarations: [COMPONENTS,],
+  declarations: [COMPONENTS],
   imports: [
     CommonModule,
     MaterialModule,

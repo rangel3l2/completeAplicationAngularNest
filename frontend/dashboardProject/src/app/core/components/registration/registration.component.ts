@@ -17,6 +17,7 @@ export class RegistrationComponent implements OnInit{
   submitted=false;
   productForm!: FormGroup;
   category!: Category[]
+  setCategory! : {}
   constructor(
     private formBuilder: FormBuilder,
     private productService: ProductService,
@@ -61,7 +62,7 @@ export class RegistrationComponent implements OnInit{
   getCategory() {
     
     this.categoryService.getCategories().subscribe(response=>{
-      console.log(response)
+     // console.log(response)
       this.category=response
     })  
   
@@ -95,7 +96,7 @@ onSubmit(form: FormGroup) {
 
 
 //mostra no terminal mudança
-    console.log(this.product);
+    //console.log(this.product);
 
     this.productService.save(this.product).subscribe({
       next: (product) => {
@@ -114,6 +115,7 @@ onSubmit(form: FormGroup) {
 }
 //mapeia formulario produts
 mapFormValuesToProductModel() {
+
   this.product.name = this.productForm.value.name;  
   this.product.description = this.productForm.value.description;
   this.product.category = this.productForm.value.category;
@@ -122,6 +124,7 @@ mapFormValuesToProductModel() {
   this.product.quantity = this.productForm.value.quantity;
   this.product.weight = this.productForm.value.weight;
   this.product.unity = this.productForm.value.unity;
+  this.product.active = true;
 
 }
 

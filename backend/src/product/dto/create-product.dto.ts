@@ -10,5 +10,5 @@ export class CreateProductDto {
     quantity: number;
     weight: number;
     unity:string
-    active: boolean;
+    active: boolean;    
 }

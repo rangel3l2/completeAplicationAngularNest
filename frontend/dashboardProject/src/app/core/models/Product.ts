@@ -6,9 +6,9 @@ export interface Product {
     description?: string;
     category?: Category
     image?: string;      
-    price: number;
-    quantity: number;
-    weight: number;
-    unity:string
-    active: boolean;
+    price?: number;
+    quantity?: number;
+    weight?: number;
+    unity?:string
+    active?: boolean;
 }

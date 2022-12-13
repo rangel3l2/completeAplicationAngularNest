@@ -21,6 +21,8 @@ save(product: Product): Observable<Product> {
    
   
   return this.http.post<Product>(this.baseUrl, product, {  
+    
+    /**@SaveProduct */
      
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -38,5 +40,16 @@ private handleError(errorResponse: HttpErrorResponse) {
     }
     return throwError(()=> 'There is a problem with the service. We are notified & working on it. Please try again later.');
   }
+  /**@getProduct */
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl,{
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+      
+    })
+    .pipe(catchError(this.handleError));
+  }
+  
 }
 

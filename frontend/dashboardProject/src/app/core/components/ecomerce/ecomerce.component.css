@@ -30,8 +30,10 @@
 .container-ecomerce{
   direction:ltr;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   gap: 5%;
+  padding: 2%;
 
 
 }
