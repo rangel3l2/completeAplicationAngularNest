@@ -21,7 +21,7 @@ export class Product {
     description : string
     @ManyToOne(() => Category, (category) => category.products)
     category: Category;
-    @Column()
+    @Column({type: 'longblob'})
     image : string 
 
 }

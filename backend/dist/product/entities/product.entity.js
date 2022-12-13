@@ -31,7 +31,7 @@ __decorate([
     __metadata("design:type", category_entity_1.Category)
 ], Product.prototype, "category", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: 'longblob' }),
     __metadata("design:type", String)
 ], Product.prototype, "image", void 0);
 Product = __decorate([

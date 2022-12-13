@@ -73,7 +73,7 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], CategoryController.prototype, "remove", null);
 CategoryController = __decorate([
-    (0, common_1.Controller)('category'),
+    (0, common_1.Controller)('api/category'),
     __metadata("design:paramtypes", [category_service_1.CategoryService])
 ], CategoryController);
 exports.CategoryController = CategoryController;
