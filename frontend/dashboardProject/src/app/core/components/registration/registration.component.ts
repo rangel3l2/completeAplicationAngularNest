@@ -102,6 +102,7 @@ onSubmit(form: FormGroup) {
 
   }
 }
+//mapeia formulario produts
 mapFormValuesToProductModel() {
   this.product.name = this.productForm.value.name;  
   this.product.description = this.productForm.value.description;
