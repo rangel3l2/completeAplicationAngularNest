@@ -34,7 +34,7 @@ export class RegistrationComponent implements OnInit{
       description: '',
       category: {
         id: '',
-        name: ''
+       
       },
       image: '',      
       price: 0,
@@ -99,7 +99,7 @@ onSubmit(form: FormGroup) {
 
     this.productService.save(this.product).subscribe({
       next: (product) => {
-        this._router.navigate(['Ecomerce']);
+        this._router.navigate(['ecomerce']);
       
       },
       error: (err: any) => console.log(err)
