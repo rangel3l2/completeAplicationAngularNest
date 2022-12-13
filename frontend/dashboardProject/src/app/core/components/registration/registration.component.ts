@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { Category } from '../../models/Category';
 import { Product } from '../../models/Product';
+import { CategoryService } from '../../services/category.service';
 import { ProductService } from '../../services/product.service';
 @Component({
   selector: 'app-registration',
@@ -15,17 +16,18 @@ export class RegistrationComponent implements OnInit{
   product!: Product;
   submitted=false;
   productForm!: FormGroup;
-  
+  category!: Category[]
   constructor(
     private formBuilder: FormBuilder,
     private productService: ProductService,
-    private _router: Router
+    private _router: Router,
+    private categoryService : CategoryService
 
     ) {}
 
   ngOnInit(): void {
 
-  
+    this.getCategory()
   
     this.product = {
       name: '',
@@ -55,6 +57,14 @@ export class RegistrationComponent implements OnInit{
     });
 
 
+  }
+  getCategory() {
+    
+    this.categoryService.getCategories().subscribe(response=>{
+      console.log(response)
+      this.category=response
+    })  
+  
   }
    imageSrc: string = '';
 

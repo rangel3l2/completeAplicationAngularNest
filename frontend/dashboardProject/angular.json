@@ -96,7 +96,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/angular-calendar/css/angular-calendar.css",
+             
               "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],

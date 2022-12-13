@@ -50,9 +50,10 @@
       <p>
         <mat-form-field appearance="outline" color="accent" >
           <mat-label>Selecione categoria</mat-label>
-          <mat-select  formControlName="category">
-            <mat-option value="one">First option</mat-option>
-            <mat-option value="two">Second option</mat-option>            
+          <mat-select   formControlName="category"  >
+            <mat-option *ngFor="let category of category" [value]="category.name">
+              {{category.name}}
+            </mat-option>           
           </mat-select>
           <mat-icon matSuffix>check_box</mat-icon>
           </mat-form-field>
