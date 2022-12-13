@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../models/Product';
 import { ProductService } from '../../services/product.service';
 
@@ -9,8 +10,13 @@ import { ProductService } from '../../services/product.service';
 })
 export class EcomerceComponent implements OnInit {
   product!: Product[]
-  constructor( private productService: ProductService) { }
 
+  constructor( private productService: ProductService,
+    private route: ActivatedRoute,
+    private router: Router) {
+     
+     }
+     
   ngOnInit(): void {
     this.getProduct()
   }
@@ -20,5 +26,7 @@ export class EcomerceComponent implements OnInit {
       console.log(response)
       this.product=response
     })  
+
 }
+
 }

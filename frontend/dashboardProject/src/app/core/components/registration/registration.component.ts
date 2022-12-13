@@ -100,7 +100,7 @@ onSubmit(form: FormGroup) {
 
     this.productService.save(this.product).subscribe({
       next: (product) => {
-        this._router.navigate(['ecomerce']);
+        // this._router.navigate(['ecomerce'],{ state: { product: this.product }});
       
       },
       error: (err: any) => console.log(err)
