@@ -9,14 +9,42 @@
           <mat-hint>Tamanho máximo de 15 caracteres</mat-hint>
         </mat-form-field>
       </p>
+      
       <p>
   
         <mat-form-field appearance="outline"  color="accent">
-          <mat-label for="promoKey">Valor</mat-label>
-          <input  matInput  id="promoKey" name="promoKey" placeholder="valor"  formControlName="value" />
-          <mat-icon matSuffix>monetization_on</mat-icon>
-          <mat-hint>somente números</mat-hint>
-        
+          <mat-label for="promoKey">Peso</mat-label>
+          <input  matInput  id="promoKey" name="promoKey" placeholder="peso"  formControlName="weight" />
+          <mat-icon matSuffix>scale</mat-icon>
+          <mat-hint>somente números</mat-hint>        
+        </mat-form-field>
+      </p>
+      <p>
+  
+        <mat-form-field appearance="outline"  color="accent">
+          <mat-label for="promoKey">Unidade</mat-label>
+          <input  matInput  id="promoKey" name="promoKey" placeholder="unidade"  formControlName="unity" />
+          <mat-icon matSuffix>extension_off</mat-icon>
+          <mat-hint>sigla da unidade</mat-hint>        
+        </mat-form-field>
+      </p>
+      <p>
+      <p>
+  
+        <mat-form-field appearance="outline"  color="accent">
+          <mat-label for="promoKey">Quantidade</mat-label>
+          <input  matInput  id="promoKey" name="promoKey" placeholder="quantidade"  formControlName="quantity" />
+          <mat-icon matSuffix>production_quantity_limits</mat-icon>
+          <mat-hint>somente números</mat-hint>        
+        </mat-form-field>
+      </p>
+      <p>
+       
+        <mat-form-field appearance="outline"  color="accent">
+          <mat-label for="promoKey">Preço</mat-label>
+          <input  matInput  id="promoKey" name="promoKey" placeholder="preço"  formControlName="price" />
+          <mat-icon matSuffix>payments</mat-icon>
+          <mat-hint>somente números</mat-hint>        
         </mat-form-field>
       </p>
       <p>
@@ -51,7 +79,7 @@
       </div>
       <div class="form-group submit-button">
         
-        <button mat-flat-button color="accent" [disabled]="productForm.invalid">
+        <button mat-flat-button color="accent" [disabled]="productForm.invalid" (click)="onSubmit(productForm)">
           Enviar
         </button>
       </div>

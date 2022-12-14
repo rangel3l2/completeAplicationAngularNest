@@ -5,6 +5,10 @@ export interface Product {
     name?: string;
     description?: string;
     category?: Category
-    image?: string;
-    value?: number;
+    image?: string;      
+    price: number;
+    quantity: number;
+    weight: number;
+    unity:string
+    active: boolean;
 }

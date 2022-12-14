@@ -34,6 +34,26 @@ __decorate([
     (0, typeorm_1.Column)({ type: 'longblob' }),
     __metadata("design:type", String)
 ], Product.prototype, "image", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Product.prototype, "price", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Product.prototype, "quantity", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Product.prototype, "weight", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], Product.prototype, "unity", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Boolean)
+], Product.prototype, "active", void 0);
 Product = __decorate([
     (0, typeorm_1.Entity)('tbl_product')
 ], Product);

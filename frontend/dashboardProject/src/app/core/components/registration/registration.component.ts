@@ -34,16 +34,22 @@ export class RegistrationComponent implements OnInit{
         id: '',
         name: ''
       },
-      image: '',
-      value: 0
+      image: '',      
+      price: 0,
+      quantity: 0,
+      weight: 0,
+      unity: '',
+      active: true
     };
 
     this.productForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
-      value: new FormControl('', [Validators.required]),
-      description: new FormControl(''),
+           description: new FormControl(''),
       category: new FormControl('', [Validators.required]),
-      image: new FormControl('', [Validators.required])
+      image: new FormControl('', [Validators.required]),
+      price: new FormControl('', [Validators.required]),     
+      quantity: new FormControl(''),
+      weight: new FormControl(''),
     
     });
 
@@ -82,7 +88,7 @@ onSubmit(form: FormGroup) {
 
     this.productService.save(this.product).subscribe({
       next: (product) => {
-        this._router.navigate(['']);
+        this._router.navigate(['Ecomerce']);
       
       },
       error: (err: any) => console.log(err)
@@ -96,11 +102,13 @@ onSubmit(form: FormGroup) {
   }
 }
 mapFormValuesToProductModel() {
-  this.product.name = this.productForm.value.name;
-  this.product.value = this.productForm.value.value;
+  this.product.name = this.productForm.value.name;  
   this.product.description = this.productForm.value.description;
   this.product.category = this.productForm.value.category;
   this.product.image = this.productForm.value.image;
+  this.product.price = this.productForm.value.price;
+  this.product.quantity = this.productForm.value.quantity;
+  this.product.weight = this.productForm.value.weight;
 
 }
 

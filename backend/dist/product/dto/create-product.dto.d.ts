@@ -5,4 +5,9 @@ export declare class CreateProductDto {
     description: string;
     category: Category;
     image: string;
+    price: number;
+    quantity: number;
+    weight: number;
+    unity: string;
+    active: boolean;
 }

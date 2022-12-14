@@ -17,10 +17,11 @@ constructor(private http: HttpClient) {}
 //create
 save(product: Product): Observable<Product> {
   
-
+  console.log("clicou") 
    
   
-  return this.http.post<Product>(this.baseUrl, product, {    
+  return this.http.post<Product>(this.baseUrl, product, {  
+     
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })

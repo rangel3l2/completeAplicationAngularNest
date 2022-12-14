@@ -5,5 +5,10 @@ export class CreateProductDto {
     name: string;
     description: string;
     category : Category
-    image: string;
+    image: string;   
+    price: number;
+    quantity: number;
+    weight: number;
+    unity:string
+    active: boolean;
 }
