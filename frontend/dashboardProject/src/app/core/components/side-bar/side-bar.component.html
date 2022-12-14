@@ -23,12 +23,12 @@
 
 
                 <div class="flex-end">
-                <button  mat-icon-button   class="button-sidebar" [routerLink]="''">
+                <button  mat-icon-button   class="button-sidebar" routerLink="">
                   <mat-icon>token</mat-icon>
                   <mat-list-item  role="listitem">Dashboard</mat-list-item>
 
                 </button>
-                <button class="button-sidebar" mat-icon-button  routerLink="/registration">
+                <button  class="button-sidebar" mat-icon-button  routerLink="/registration">
                   <mat-icon>event</mat-icon>
                   <mat-list-item role="listitem">Cadastrar Produto</mat-list-item>
 
@@ -57,13 +57,14 @@
     </mat-drawer>
     <mat-drawer-content [ngStyle]="{'margin-left.px' : contentMargin}">
 
-      <div style = "height: 83vh;">
+      <div style = "height: 85vh;">
 
             <router-outlet>
 
             </router-outlet>
 
         </div>
-
+       
     </mat-drawer-content>
+    
 </mat-drawer-container>

@@ -19,15 +19,17 @@ const routes: Routes = [
         component: DashboardComponent,
       },
       {
-        path: 'ecomerce',
-        component: EcomerceComponent,
-
-      },
-      {
         path: 'registration',
         component: RegistrationComponent,
 
       },
+    
+      {
+        path: 'ecomerce',
+        component: EcomerceComponent,
+
+      },
+    
     ]
   }
 

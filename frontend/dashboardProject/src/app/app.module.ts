@@ -10,6 +10,7 @@ import { ServicesModule } from './core/services/services.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,9 @@ import { ServicesModule } from './core/services/services.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,    
-    DefaultModule, 
+    DefaultModule,
+   
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

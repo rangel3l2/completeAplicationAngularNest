@@ -1,7 +1,12 @@
-import { Product } from "../model/Product";
+import { Product } from "../models/Product";
 import { Observable, catchError, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Injectable } from "@angular/core";
 
+
+@Injectable({
+  providedIn: 'root'
+})
 export class ProductService {
 
 

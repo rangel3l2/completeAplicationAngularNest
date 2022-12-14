@@ -14,7 +14,7 @@ import { BarChartComponent } from './dashboard/card-graths/bar-chart/bar-chart.c
 import { EcomerceComponent } from './ecomerce/ecomerce.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ListSelectionComponent } from './dashboard/list-selection/list-selection.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const COMPONENTS = [
   SideBarComponent,
@@ -39,7 +39,9 @@ const COMPONENTS = [
     CommonModule,
     MaterialModule,
     RouterModule, 
-
+    FormsModule,
+    ReactiveFormsModule
+    
 
   ],
   exports:[

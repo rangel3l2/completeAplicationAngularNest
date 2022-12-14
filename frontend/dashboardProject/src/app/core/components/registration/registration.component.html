@@ -1,0 +1,38 @@
+<form [formGroup]="productForm">
+    <div class="form-group">
+      <p>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label for="nome">Nome</mat-label>
+          <input matInput id="nome" name="nome" placeholder="digite seu nome" formControlName="nome" />
+          <mat-hint>Tamanho máximo de 15 caracteres</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+  
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label for="promoKey">Valor</mat-label>
+          <input matInput id="promoKey" name="promoKey" placeholder="valor"  formControlName="value" />
+        
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label for="promoKey">Valor</mat-label>
+            <input matInput id="promoKey" name="promoKey" placeholder="valor"  formControlName="description" />
+          
+          </mat-form-field>
+      
+      </p>
+  
+      <p>
+  
+        
+  
+  
+      </div>
+      <div class="form-group submit-button">
+        <button mat-flat-button color="accent" [disabled]="productForm.invalid">
+          Enviar
+        </button>
+      </div>
+    </form>
