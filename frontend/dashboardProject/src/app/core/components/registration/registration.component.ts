@@ -40,12 +40,32 @@ export class RegistrationComponent implements OnInit{
 
     this.productForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
-      value: new FormControl(''),
+      value: new FormControl('', [Validators.required]),
       description: new FormControl(''),
+      category: new FormControl('', [Validators.required]),
+      image: new FormControl('', [Validators.required])
     
     });
 
 
+  }
+   imageSrc: string = '';
+
+  handleInputChange(e : any) {
+    var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+    var pattern = /image-*/;
+    var reader = new FileReader();
+    if (!file.type.match(pattern)) {
+      alert('invalid format');
+      return;
+    }
+    reader.onload = this._handleReaderLoaded.bind(this);
+    reader.readAsDataURL(file);
+  }
+  _handleReaderLoaded(e : any) {
+    let reader = e.target;
+    this.imageSrc = reader.result;
+    console.log(this.imageSrc)
   }
 
 
