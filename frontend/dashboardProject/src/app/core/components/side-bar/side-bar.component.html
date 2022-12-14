@@ -1,0 +1,69 @@
+
+<div id="header">
+    <button  mat-icon-button (click)="drawer.toggle()" (click) = "onToolBarMenuToggle()">
+        <mat-icon class="icon-color" color="primary">menu</mat-icon>
+    </button>
+    <app-menu-bar>
+
+    </app-menu-bar>
+
+</div>
+
+<mat-drawer-container >
+
+
+    <mat-drawer #drawer opened="true" mode="side" [class.menu-open]=" isMenuOpen"
+    [class.menu-close] = " !isMenuOpen">
+
+        <mat-nav-list >
+            <div id="imgDiv">
+                <img id="imgSurvivor" src="../../../../assets/img/The-Last-Survivors-1.jpg" sizes="cover" alt="">
+              </div>
+
+
+
+                <div class="flex-end">
+                <button  mat-icon-button   class="button-sidebar" [routerLink]="''">
+                  <mat-icon>token</mat-icon>
+                  <mat-list-item  role="listitem">Dashboard</mat-list-item>
+
+                </button>
+                <button class="button-sidebar" mat-icon-button  routerLink="/calendary">
+                  <mat-icon>event</mat-icon>
+                  <mat-list-item role="listitem">Calendário</mat-list-item>
+
+                </button>
+                <button class="button-sidebar" mat-icon-button  routerLink="/ecomerce">
+                  <mat-icon>local_convenience_store</mat-icon>
+                  <mat-list-item role="listitem">E-Comerce</mat-list-item>
+                </button>
+                <button class="button-sidebar" mat-icon-button >
+                  <mat-icon>school</mat-icon>
+                  <mat-list-item role="listitem">Academia</mat-list-item>
+                </button>
+                <button mat-icon-button class="button-sidebar">
+                  <mat-icon>mail</mat-icon>
+                  <mat-list-item role="listitem">Email</mat-list-item>
+                </button>
+                <button mat-icon-button class="button-sidebar">
+                  <mat-icon>chat_bubble</mat-icon>
+                  <mat-list-item role="listitem">Mensagens</mat-list-item>
+                </button>
+
+                </div>
+
+
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content [ngStyle]="{'margin-left.px' : contentMargin}">
+
+      <div style = "height: 83vh;">
+
+            <router-outlet>
+
+            </router-outlet>
+
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>

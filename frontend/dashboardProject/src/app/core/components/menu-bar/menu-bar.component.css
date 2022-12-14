@@ -1,0 +1,40 @@
+:host{
+    width: 100%;
+    background-color: #000;
+}
+h1{
+    margin-left: 2%;
+   
+}
+
+ul li{
+    list-style: none;
+  }
+  mat-toolbar{
+    display: flex;
+    width: 100%;
+    background: #000;
+    flex-direction: row;
+  
+  
+  }
+  #logo{
+    color: #fff;
+    margin-left: 2%;
+  }
+  
+  mat-icon{
+    color: #fff;
+  }
+  .button-menu{
+    background: #000;
+    padding: 5px;
+    border: none;
+  
+  }
+  .flex-end{
+    margin-left: auto;
+  
+  }
+  
+  

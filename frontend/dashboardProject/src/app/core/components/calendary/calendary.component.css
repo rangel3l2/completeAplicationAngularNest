@@ -1,0 +1,13 @@
+:host{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #7372e5;
+  background-image: linear-gradient(180deg, #7372e5 0%, #1537b2 50%, #190c0c 100%);
+  flex-direction: column;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  direction:rtl;
+
+}
