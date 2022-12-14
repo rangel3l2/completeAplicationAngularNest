@@ -6,6 +6,7 @@
   background-image: linear-gradient(180deg, #7372e5 0%, #1537b2 50%, #190c0c 100%);
   flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 
   direction:rtl;
@@ -29,14 +30,16 @@
 }
 .container-registration{
   direction:ltr;
+  
   width:100%;
   height:100%;
   display:flex;
-  flex-direction: column;
-  margin: auto;
+  flex-direction: column; 
   gap: 5%;
   justify-content: center;
-  align-items: center;
+  padding: 6%;
+  margin-bottom: 3%;
+ 
 
 
 }
@@ -52,28 +55,30 @@ mat-form-field:hover{
 }
 form{
   display: flex;
-  align-items: center; 
-  align-content: center;
+  margin: auto;
+  justify-content: center;
+  width: 70%;
   flex-direction: column;
+ 
+  
 
 }
 #input-file{
   display: flex;
   flex-direction: row;
-  background-color: #000;
-  margin-bottom: 2%;
+  
+ 
   width: 100%;
   border-radius: 10px;
   align-items: center;
 
 }
 #input-file[type=file]{
-  background-color: #000;
+  font-size: 1.5rem;
+  margin: auto;
   border-radius: 12px;
   height: 50px;
   
 
 }
-mat-label{
-  margin: auto;
-}
+

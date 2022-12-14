@@ -44,12 +44,13 @@ export class RegistrationComponent implements OnInit{
 
     this.productForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
-           description: new FormControl(''),
+      description: new FormControl(''),
       category: new FormControl('', [Validators.required]),
       image: new FormControl('', [Validators.required]),
       price: new FormControl('', [Validators.required]),     
-      quantity: new FormControl(''),
-      weight: new FormControl(''),
+      quantity: new FormControl('',[Validators.required]),
+      weight: new FormControl('', [Validators.required]),
+      unity: new FormControl('', [Validators.required])
     
     });
 
@@ -109,6 +110,7 @@ mapFormValuesToProductModel() {
   this.product.price = this.productForm.value.price;
   this.product.quantity = this.productForm.value.quantity;
   this.product.weight = this.productForm.value.weight;
+  this.product.unity = this.productForm.value.unity;
 
 }
 
