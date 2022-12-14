@@ -12,9 +12,7 @@ import { LineChartComponent } from './dashboard/card-graths/line-chart/line-char
 import { TableDataComponent } from './dashboard/table-data/table-data.component';
 import { BarChartComponent } from './dashboard/card-graths/bar-chart/bar-chart.component';
 import { EcomerceComponent } from './ecomerce/ecomerce.component';
-import { CalendaryComponent } from './calendary/calendary.component';
-import { CalendarModule, DateAdapter } from 'angular-calendar';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { RegistrationComponent } from './registration/registration.component';
 import { ListSelectionComponent } from './dashboard/list-selection/list-selection.component';
 
 
@@ -29,7 +27,7 @@ const COMPONENTS = [
   TableDataComponent,
   BarChartComponent,
   EcomerceComponent,
-  CalendaryComponent,
+  RegistrationComponent,
   ListSelectionComponent
 
 
@@ -40,11 +38,7 @@ const COMPONENTS = [
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule,
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory,
-    }),
+    RouterModule, 
 
 
   ],
